@@ -65,6 +65,19 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
+                    {project.projectBullets && (
+                    <ul style={{ textAlign: "left", fontSize: "0.9rem", paddingLeft: "1.2rem", marginTop: "0.5rem" }}>
+                      {project.projectBullets.map((bullet, index) => (
+                        <li
+                          key={index}
+                          className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+                        >
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  
+                  )}
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
